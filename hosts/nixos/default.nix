@@ -32,6 +32,9 @@
   # Disable mutable users for impermanence
   users.mutableUsers = false;
 
+  # Configure sudo to not require password for wheel group
+  security.sudo.wheelNeedsPassword = false;
+
   # Enable OpenSSH daemon
   services.openssh.enable = true;
 

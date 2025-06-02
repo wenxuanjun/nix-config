@@ -4,6 +4,17 @@
 { config, lib, pkgs, ... }:
 
 {
+  dconf = {
+    settings = {
+      "org/gnome/desktop/interface" = {
+        gtk-theme = "adw-gtk3-dark";
+        color-scheme = "prefer-dark";
+        # icon-theme = "Papirus-Dark";
+        # font-name = "Source Han Sans SC";
+      };
+    };
+  };
+
   gtk = {
     enable = true;
     font.name = "Source Han Sans SC";

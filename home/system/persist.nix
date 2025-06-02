@@ -28,6 +28,9 @@
       ".mozilla"
       ".config/QQ"
 
+      # Cache directories
+      ".cache/nix"
+
       # System directories that may contain user data
       ".local/share/keyrings"
       ".local/share/zed"

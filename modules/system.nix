@@ -22,4 +22,8 @@
 
   # Enable fuse userAllowOther for home-manager impermanence
   programs.fuse.userAllowOther = true;
+
+  # Enable services for better file manager functionality
+  services.gvfs.enable = true;
+  services.tumbler.enable = true;
 }

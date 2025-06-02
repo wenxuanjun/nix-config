@@ -6,6 +6,8 @@
   ];
 
   home.persistence."/persist" = {
+    hideMounts = true;
+
     directories = [
       # User directories
       "Downloads"

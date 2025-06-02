@@ -21,9 +21,14 @@
     imagemagick
     pavucontrol
     seahorse
+    file-roller
 
     # File management
-    xfce.thunar
-    xfce.thunar-volman
+    (xfce.thunar.override {
+      thunarPlugins = [
+        xfce.thunar-volman
+        xfce.thunar-archive-plugin
+      ];
+    })
   ];
 }

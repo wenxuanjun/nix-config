@@ -18,7 +18,7 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
-  
+
   # Set time zone
   time.timeZone = "Asia/Shanghai";
 
@@ -26,7 +26,11 @@
   users.users.wendster = {
     isNormalUser = true;
     extraGroups = [ "wheel" "networkmanager" ];
+    initialPassword = "passwd";
   };
+
+  # Disable mutable users for impermanence
+  users.mutableUsers = false;
 
   # Enable OpenSSH daemon
   services.openssh.enable = true;

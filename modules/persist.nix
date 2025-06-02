@@ -12,15 +12,12 @@
     # System directories that need to persist
     directories = [
       # System configuration and state
-      "/etc/nixos"
       "/etc/NetworkManager/system-connections"
-      "/etc/ssh"
 
       # System logs and state
       "/var/log"
       "/var/lib/nixos"
       "/var/lib/systemd/coredump"
-      "/var/lib/NetworkManager"
     ];
 
     # Individual files that need to persist
@@ -35,14 +32,4 @@
       "/etc/ssh/ssh_host_rsa_key.pub"
     ];
   };
-
-  # Ensure the persistent directory exists and has correct permissions
-  systemd.tmpfiles.rules = [
-    "d /persistent 0755 root root -"
-    "d /persistent/home 0755 root root -"
-    "d /persistent/home/wendster 0750 wendster users -"
-  ];
-
-  # Optional: Configure automatic cleanup of temporary files
-  boot.tmp.cleanOnBoot = true;
 }

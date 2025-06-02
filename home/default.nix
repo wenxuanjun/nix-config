@@ -1,7 +1,7 @@
 # Main home configuration file
 # This file brings together all the modular home-manager components
 
-{ config, lib, pkgs, inputs, ... }:
+{ config, lib, pkgs, ... }:
 
 {
   # User information
@@ -19,7 +19,7 @@
     ./system/theming.nix
     ./system/git.nix
     ./system/ssh.nix
-    # ./system/persist.nix
+    ./system/persist.nix
 
     # Desktop Environment
     ./desktop/niri.nix

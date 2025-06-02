@@ -13,11 +13,30 @@
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
 
+  fileSystems."/boot" = {
+    device = "/dev/disk/by-uuid/2A54-0E97";
+    fsType = "vfat";
+    options = [ "fmask=0022" "dmask=0022" ];
+  };
+
   fileSystems."/" = {
     device = "/dev/disk/by-uuid/3aee93cc-d679-4669-98a3-c9b596baacb0";
     fsType = "btrfs";
     options = [ "subvol=@" "compress=zstd" ];
   };
+
+  # fileSystems."/" = {
+  #   device = "none";
+  #   fsType = "tmpfs";
+  #   options = [ "defaults" "size=25%" "mode=755" ];
+  # };
+
+  # fileSystems."/persist" = {
+  #   device = "/dev/disk/by-uuid/3aee93cc-d679-4669-98a3-c9b596baacb0";
+  #   neededForBoot = true;
+  #   fsType = "btrfs";
+  #   options = [ "subvol=@persist" "compress=zstd" ];
+  # };
 
   fileSystems."/home" = {
     device = "/dev/disk/by-uuid/3aee93cc-d679-4669-98a3-c9b596baacb0";
@@ -29,12 +48,6 @@
     device = "/dev/disk/by-uuid/3aee93cc-d679-4669-98a3-c9b596baacb0";
     fsType = "btrfs";
     options = [ "subvol=@nix" "compress=zstd" "noatime" ];
-  };
-
-  fileSystems."/boot" = {
-    device = "/dev/disk/by-uuid/2A54-0E97";
-    fsType = "vfat";
-    options = [ "fmask=0022" "dmask=0022" ];
   };
 
   swapDevices = [ ];

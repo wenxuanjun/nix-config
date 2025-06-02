@@ -8,9 +8,10 @@
     nur.inputs.nixpkgs.follows = "nixpkgs";
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    impermanence.url = "github:nix-community/impermanence";
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, nur, niri, ... }: {
+  outputs = inputs@{ self, nixpkgs, home-manager, nur, niri, impermanence, ... }: {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs; };
       modules = [
@@ -21,10 +22,12 @@
         ./modules/niri.nix
         ./modules/system.nix
         ./modules/greetd.nix
+        # ./modules/persist.nix
 
         # External modules
         nur.modules.nixos.default
         niri.nixosModules.niri
+        # impermanence.nixosModules.impermanence
 
         # Home manager configuration
         home-manager.nixosModules.home-manager

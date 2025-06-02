@@ -16,6 +16,9 @@
   # Allow installation of unfree packages
   nixpkgs.config.allowUnfree = true;
 
+  # Enable fuse userAllowOther for home-manager impermanence
+  programs.fuse.userAllowOther = true;
+
   # Core system packages available to all users
   environment.systemPackages = with pkgs; [
     git

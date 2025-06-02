@@ -19,6 +19,7 @@
     ./system/theming.nix
     ./system/git.nix
     ./system/ssh.nix
+    # ./system/persist.nix
 
     # Desktop Environment
     ./desktop/niri.nix

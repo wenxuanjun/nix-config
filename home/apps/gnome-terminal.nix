@@ -1,6 +1,3 @@
-# GNOME Terminal configuration module
-# This module configures the GNOME Terminal and a themed profile
-
 { config, lib, pkgs, ... }:
 
 {

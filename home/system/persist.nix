@@ -1,6 +1,3 @@
-# Home-manager impermanence configuration
-# This module configures which user files and directories should persist across reboots
-
 { config, lib, pkgs, inputs, ... }:
 
 {

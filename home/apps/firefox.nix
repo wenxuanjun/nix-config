@@ -1,6 +1,3 @@
-# Firefox browser configuration module
-# This module configures Firefox and its extensions
-
 { config, lib, pkgs, ... }:
 
 {

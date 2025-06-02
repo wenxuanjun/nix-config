@@ -1,6 +1,3 @@
-# Fcitx5 input method module
-# This module configures the Fcitx5 input method framework for multilingual input
-
 { config, lib, pkgs, ... }:
 
 {

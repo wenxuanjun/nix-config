@@ -1,6 +1,3 @@
-# Zed editor configuration module
-# This module configures the Zed code editor
-
 { config, lib, pkgs, ... }:
 
 {

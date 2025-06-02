@@ -1,6 +1,3 @@
-# System services module
-# This module configures user-level systemd services for the desktop environment
-
 { config, lib, pkgs, ... }:
 
 {

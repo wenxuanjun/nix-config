@@ -1,6 +1,3 @@
-# Niri window manager configuration module
-# This module configures Niri window manager for the home environment
-
 { config, lib, pkgs, ... }:
 
 {

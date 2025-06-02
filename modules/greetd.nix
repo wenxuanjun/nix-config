@@ -1,6 +1,3 @@
-# Display manager configuration using greetd
-# This module sets up greetd with tuigreet as the greeter
-
 { config, lib, pkgs, ... }:
 
 {

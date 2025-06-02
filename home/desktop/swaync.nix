@@ -1,6 +1,3 @@
-# SwayNC notification daemon module
-# This module configures the swaync notification system for Wayland compositors
-
 { config, lib, pkgs, ... }:
 
 {

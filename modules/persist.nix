@@ -1,7 +1,3 @@
-# Impermanence configuration for NixOS
-# This module configures which files and directories should persist across reboots
-# when using an impermanent root filesystem.
-
 { config, lib, pkgs, ... }:
 
 {

@@ -1,7 +1,3 @@
-# Basic system configuration for NixOS
-# This module contains core system settings like Nix configuration, package management,
-# and basic system packages.
-
 { config, lib, pkgs, ... }:
 
 {

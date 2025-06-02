@@ -1,6 +1,3 @@
-# Theming module for GTK and Qt applications
-# This module configures the appearance of GTK and Qt applications
-
 { config, lib, pkgs, ... }:
 
 {
@@ -33,16 +30,5 @@
     enable = true;
     platformTheme.name = "adwaita";
     style.name = "adwaita-dark";
-  };
-
-  xdg = {
-    enable = true;
-    mimeApps = {
-      enable = true;
-      defaultApplications = {
-        "inode/directory" = [ "thunar.desktop" ];
-        "x-scheme-handler/terminal" = [ "org.gnome.Terminal.desktop" ];
-      };
-    };
   };
 }

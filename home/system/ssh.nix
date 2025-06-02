@@ -1,6 +1,3 @@
-# SSH client configuration module
-# This module configures SSH client with security settings and convenience options
-
 { config, lib, pkgs, ... }:
 
 {

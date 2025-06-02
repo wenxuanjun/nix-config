@@ -1,6 +1,3 @@
-# Niri Window Manager Module
-# Sets up Niri, a simple but featureful Wayland compositor
-
 { config, lib, pkgs, inputs, ... }:
 
 {

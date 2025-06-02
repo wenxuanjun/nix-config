@@ -1,6 +1,3 @@
-# Packages module for user environment
-# This module manages the packages installed in the user's environment
-
 { config, lib, pkgs, ... }:
 
 {
@@ -20,6 +17,7 @@
 
     # System utilities
     fastfetch
+    htop
     imagemagick
     pavucontrol
     seahorse

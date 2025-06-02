@@ -1,6 +1,3 @@
-# Hardware configuration for NixOS host
-# This file should not be modified directly, but rather changed through the flake.
-
 { config, lib, pkgs, modulesPath, ... }:
 
 {

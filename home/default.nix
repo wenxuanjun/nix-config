@@ -1,6 +1,3 @@
-# Main home configuration file
-# This file brings together all the modular home-manager components
-
 { config, lib, pkgs, ... }:
 
 {
@@ -17,6 +14,7 @@
     ./system/services.nix
     ./system/fcitx5.nix
     ./system/theming.nix
+    ./system/xdg.nix
     ./system/git.nix
     ./system/ssh.nix
     ./system/persist.nix

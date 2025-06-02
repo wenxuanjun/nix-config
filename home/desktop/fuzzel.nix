@@ -1,6 +1,3 @@
-# Fuzzel application launcher module
-# This module configures the Fuzzel application launcher for Wayland
-
 { config, lib, pkgs, ... }:
 
 {

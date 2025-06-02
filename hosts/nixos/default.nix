@@ -1,6 +1,3 @@
-# NixOS host configuration
-# This is the main configuration file for this specific host.
-
 { config, lib, pkgs, ... }:
 
 {

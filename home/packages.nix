@@ -22,6 +22,7 @@
     fastfetch
     imagemagick
     pavucontrol
+    seahorse
 
     # File management
     xfce.thunar

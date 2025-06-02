@@ -30,8 +30,8 @@
         stream_edits = true;
       };
       buffer_line_height = { custom = 1.35; };
-      ui_font_size = 16;
-      buffer_font_size = 14;
+      ui_font_size = 15;
+      buffer_font_size = 13;
       ui_font_family = "SauceCodePro Nerd Font";
       buffer_font_family = "SauceCodePro Nerd Font";
       minimap = { show = "auto"; thumb = "hover"; };

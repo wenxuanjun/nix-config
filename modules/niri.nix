@@ -4,8 +4,6 @@
 { config, lib, pkgs, inputs, ... }:
 
 {
-  imports = [];
-
   # Enable Niri window manager
   programs.niri = {
     enable = true;

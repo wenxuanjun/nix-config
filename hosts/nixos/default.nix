@@ -26,7 +26,7 @@
   users.users.wendster = {
     isNormalUser = true;
     extraGroups = [ "wheel" "networkmanager" ];
-    initialPassword = "passwd";
+    hashedPasswordFile = "/persist/secrets/wendster";
   };
 
   # Disable mutable users for impermanence

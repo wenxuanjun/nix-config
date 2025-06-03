@@ -17,6 +17,7 @@
     ./system/xdg.nix
     ./system/git.nix
     ./system/ssh.nix
+    ./system/shell.nix
     ./system/persist.nix
 
     # Desktop Environment
@@ -31,13 +32,6 @@
     ./apps/zed-editor.nix
   ];
 
-  # Additional programs
-  programs.tmux = {
-    enable = true;
-    mouse = true;
-    disableConfirmationPrompt = true;
-  };
-
   # State version
-  home.stateVersion = "23.11";
+  home.stateVersion = "25.11";
 }

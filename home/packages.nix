@@ -16,8 +16,6 @@
     loupe
 
     # System utilities
-    fastfetch
-    htop
     imagemagick
     pavucontrol
     seahorse

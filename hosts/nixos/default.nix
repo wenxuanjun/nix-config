@@ -26,6 +26,9 @@
     hashedPasswordFile = "/persist/secrets/wendster";
   };
 
+  # Allow user specify substituters
+  nix.settings.trusted-users = [ "wendster" ];
+
   # Disable mutable users for impermanence
   users.mutableUsers = false;
 

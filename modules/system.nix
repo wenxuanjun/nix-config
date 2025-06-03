@@ -3,10 +3,12 @@
 {
   # Enable experimental features for flakes
   nix.settings = {
-    experimental-features = [ "nix-command" "flakes" ];
     substituters = [
       "https://mirrors.ustc.edu.cn/nix-channels/store"
+      "https://cache.nixos.org"
     ];
+
+    experimental-features = [ "nix-command" "flakes" ];
   };
 
   # Core system packages available to all users

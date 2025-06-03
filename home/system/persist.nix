@@ -33,6 +33,7 @@
       # System directories that may contain user data
       ".local/share/keyrings"
       ".local/share/mcfly"
+      ".local/share/nix"
       ".local/share/zed"
     ];
 

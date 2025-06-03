@@ -23,6 +23,7 @@
         ./modules/system.nix
         ./modules/greetd.nix
         ./modules/persist.nix
+        ./modules/snapper.nix
 
         # External modules
         nur.modules.nixos.default

@@ -40,6 +40,9 @@
     files = [
       # Shell configuration
       ".bash_history"
+
+      # Cache files
+      ".cache/fuzzel"
     ];
   };
 }

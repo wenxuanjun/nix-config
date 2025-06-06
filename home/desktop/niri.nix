@@ -109,6 +109,7 @@ in
       environment = {
         DISPLAY = ":0";
         LANG = "zh_CN.UTF-8";
+        LANGUAGE = "zh_CN:en_US";
       };
 
       input = {

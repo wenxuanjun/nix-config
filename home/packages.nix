@@ -19,6 +19,7 @@
     imagemagick
     pavucontrol
     seahorse
+    nekoray
     file-roller
 
     # File management

@@ -4,6 +4,7 @@
   # User information
   home.username = "wendster";
   home.homeDirectory = "/home/wendster";
+  # home.language.base = "zh_CN.UTF-8";
 
   # Import all modules
   imports = [

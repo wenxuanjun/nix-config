@@ -26,7 +26,7 @@
     device = "/dev/disk/by-uuid/3aee93cc-d679-4669-98a3-c9b596baacb0";
     neededForBoot = true;
     fsType = "btrfs";
-    options = [ "subvol=@persist" "compress=zstd" ];
+    options = [ "subvol=@root" "compress=zstd" ];
   };
 
   fileSystems."/persist/home" = {

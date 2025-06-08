@@ -79,9 +79,6 @@ in
         };
       };
 
-      prefer-no-csd = true;
-      hotkey-overlay.skip-at-startup = true;
-
       window-rules = [
         {
           geometry-corner-radius = {
@@ -106,15 +103,13 @@ in
         };
       };
 
-      environment = {
-        DISPLAY = ":0";
-        LANG = "zh_CN.UTF-8";
-        LANGUAGE = "zh_CN:en_US";
-      };
-
       input = {
         touchpad = {
           scroll-factor = 0.25;
+        };
+        mouse = {
+          scroll-factor = 2.0;
+          scroll-method = "on-button-down";
         };
         power-key-handling = {
           enable = false;
@@ -125,6 +120,12 @@ in
         };
         workspace-auto-back-and-forth = true;
       };
+
+      prefer-no-csd = true;
+      hotkey-overlay.skip-at-startup = true;
+      clipboard.disable-primary = true;
+      environment.DISPLAY = ":0";
+      screenshot-path = "~/Pictures/Screenshots/Screenshot_%Y%m%d_%H%M%S.jpg";
     };
   };
 }

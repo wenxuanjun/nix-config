@@ -26,6 +26,8 @@
       # Application data
       ".mozilla"
       ".config/QQ"
+      ".config/nekoray"
+      ".config/obs-studio"
 
       # Cache directories
       ".cache/nix"

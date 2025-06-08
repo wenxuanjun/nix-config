@@ -14,6 +14,8 @@
     qq
     obs-studio
     loupe
+    celluloid
+    ffmpeg
 
     # System utilities
     imagemagick

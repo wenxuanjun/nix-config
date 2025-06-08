@@ -32,6 +32,7 @@
         ./modules/greetd.nix
         ./modules/persist.nix
         ./modules/snapper.nix
+        ./modules/nvidia.nix
 
         # External modules
         niri.nixosModules.niri

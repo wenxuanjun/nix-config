@@ -29,10 +29,19 @@
     };
   };
 
-  # Create directories for snapshots
-  # https://github.com/NixOS/nixpkgs/pull/368449
-  systemd.tmpfiles.rules = [
-    "Q /persist/.snapshots 0755 root root -"
-    "Q /persist/home/.snapshots 0755 root root -"
-  ];
+  systemd.services.snapper-subvolumes = {
+    script = lib.concatMapStringsSep "\n"
+      (config: ''
+        if [ ! -e "${config.SUBVOLUME}/.snapshots" ]; then
+          btrfs subvolume create "${config.SUBVOLUME}/.snapshots"
+        fi
+      '')
+      (lib.attrValues config.services.snapper.configs);
+
+    serviceConfig.Type = "oneshot";
+    path = with pkgs; [ btrfs-progs ];
+    requiredBy = [ "snapper-timeline.service" ];
+    before = [ "snapper-timeline.service" ];
+    description = "Create .snapshots subvolumes for Snapper";
+  };
 }

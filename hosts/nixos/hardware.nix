@@ -11,7 +11,7 @@
   boot.extraModulePackages = [ ];
 
   fileSystems."/boot" = {
-    device = "/dev/disk/by-uuid/2A54-0E97";
+    device = "/dev/disk/by-uuid/0771-5EEB";
     fsType = "vfat";
     options = [ "fmask=0022" "dmask=0022" ];
   };
@@ -23,25 +23,29 @@
   };
 
   fileSystems."/persist" = {
-    device = "/dev/disk/by-uuid/3aee93cc-d679-4669-98a3-c9b596baacb0";
+    device = "/dev/disk/by-uuid/9758cc25-9432-4b0b-b7aa-0a0a7be11f87";
     neededForBoot = true;
     fsType = "btrfs";
     options = [ "subvol=@root" "compress=zstd" ];
   };
 
   fileSystems."/persist/home" = {
-    device = "/dev/disk/by-uuid/3aee93cc-d679-4669-98a3-c9b596baacb0";
+    device = "/dev/disk/by-uuid/9758cc25-9432-4b0b-b7aa-0a0a7be11f87";
     fsType = "btrfs";
     options = [ "subvol=@home" "compress=zstd" ];
   };
 
   fileSystems."/nix" = {
-    device = "/dev/disk/by-uuid/3aee93cc-d679-4669-98a3-c9b596baacb0";
+    device = "/dev/disk/by-uuid/9758cc25-9432-4b0b-b7aa-0a0a7be11f87";
     fsType = "btrfs";
     options = [ "subvol=@nix" "compress=zstd" "noatime" ];
   };
 
-  swapDevices = [ ];
+  zramSwap = {
+    enable = true;
+    algorithm = "zstd";
+    memoryPercent = 100;
+  };
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
   # (the default) this is the recommended approach. When using systemd-networkd it's

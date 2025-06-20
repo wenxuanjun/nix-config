@@ -7,6 +7,7 @@
       "nix"
       "fleet-themes"
       "bearded-icon-theme"
+      "wakatime"
     ];
     userSettings = {
       theme = {

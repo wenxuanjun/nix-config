@@ -16,6 +16,7 @@
     loupe
     celluloid
     ffmpeg
+    prismlauncher
 
     # System utilities
     imagemagick

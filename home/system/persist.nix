@@ -37,6 +37,7 @@
       ".local/share/mcfly"
       ".local/share/nix"
       ".local/share/zed"
+      ".local/share/PrismLauncher"
     ];
 
     files = [

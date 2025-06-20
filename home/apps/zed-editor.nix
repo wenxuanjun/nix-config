@@ -34,6 +34,7 @@
       };
       languages = {
         Nix = {
+          format_on_save = "off";
           language_servers = [ "nixd" "!nil" ];
         };
       };

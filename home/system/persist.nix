@@ -40,11 +40,12 @@
     ];
 
     files = [
-      # Shell configuration
-      ".bash_history"
-
       # Cache files
       ".cache/fuzzel"
+
+      # Miscellaneous
+      ".bash_history"
+      ".wakatime.cfg"
     ];
   };
 }

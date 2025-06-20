@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   home.packages = with pkgs; [
@@ -18,12 +18,15 @@
     ffmpeg
 
     # System utilities
-    nixd
     imagemagick
     pavucontrol
     seahorse
     nekoray
     file-roller
+
+    # Programming
+    nixd
+    scc
 
     # File management
     (xfce.thunar.override {

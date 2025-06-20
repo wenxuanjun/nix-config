@@ -1,7 +1,4 @@
-# Waybar configuration module
-# This module configures the Waybar status bar for Wayland
-
-{ config, lib, pkgs, ... }:
+{ ... }:
 
 {
   programs.waybar = {

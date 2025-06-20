@@ -18,6 +18,7 @@
     ffmpeg
 
     # System utilities
+    nixd
     imagemagick
     pavucontrol
     seahorse

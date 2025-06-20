@@ -19,7 +19,7 @@
     impermanence.url = "github:nix-community/impermanence/home-manager-v2";
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, niri, impermanence, ... }: {
+  outputs = inputs@{ nixpkgs, home-manager, niri, impermanence, ... }: {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs; };
       modules = [

@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   # Core system packages available to all users
@@ -29,6 +29,14 @@
       "https://cache.nixos.org"
     ];
 
+    auto-optimise-store = true;
     experimental-features = [ "nix-command" "flakes" ];
+  };
+
+  # Enable automatic garbage collection
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 1w";
   };
 }

@@ -1,8 +1,9 @@
-{ config, lib, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   programs.zed-editor = {
     enable = true;
+    package = pkgs.zed-editor-fhs;
     extensions = [
       "nix"
       "fleet-themes"
@@ -26,6 +27,15 @@
         default_profile = "write";
         always_allow_tool_actions = true;
         stream_edits = true;
+      };
+      telemetry = {
+        metrics = false;
+        diagnostics = false;
+      };
+      languages = {
+        Nix = {
+          language_servers = [ "nixd" "!nil" ];
+        };
       };
       buffer_line_height = { custom = 1.35; };
       ui_font_size = 15;

@@ -38,6 +38,7 @@
       ".local/share/nix"
       ".local/share/zed"
       ".local/share/PrismLauncher"
+      ".local/state/wireplumber"
     ];
 
     files = [

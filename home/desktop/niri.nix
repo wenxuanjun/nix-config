@@ -81,26 +81,34 @@ in
 
       window-rules = [
         {
+          matches = [
+            { app-id = "Zed$"; }
+            { app-id = "firefox$"; }
+          ];
+          scroll-factor = 2.0;
+        }
+        {
           geometry-corner-radius = {
             top-left = 8.0;
             top-right = 8.0;
             bottom-left = 8.0;
             bottom-right = 8.0;
           };
+          open-floating = true;
           clip-to-geometry = true;
         }
       ];
 
       layout = {
         gaps = 8;
-        default-column-width = {
-          proportion = 0.5;
-        };
-        focus-ring = {
+        border = {
+          enable = true;
           width = 1;
           active.color = "#50a8ff";
           inactive.color = "#505050";
         };
+        shadow.enable = true;
+        focus-ring.enable = false;
       };
 
       input = {
@@ -108,7 +116,6 @@ in
           scroll-factor = 0.25;
         };
         mouse = {
-          scroll-factor = 2.0;
           scroll-method = "on-button-down";
         };
         power-key-handling = {

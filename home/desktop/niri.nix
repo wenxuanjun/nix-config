@@ -94,7 +94,6 @@ in
             bottom-left = 8.0;
             bottom-right = 8.0;
           };
-          open-floating = true;
           clip-to-geometry = true;
         }
       ];
@@ -109,6 +108,7 @@ in
         };
         shadow.enable = true;
         focus-ring.enable = false;
+        default-column-width.proportion = 0.5;
       };
 
       input = {

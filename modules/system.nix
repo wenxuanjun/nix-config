@@ -22,6 +22,11 @@
   services.gvfs.enable = true;
   services.tumbler.enable = true;
 
+  # Enable bluetooth support
+  hardware.bluetooth.enable = true;
+  hardware.bluetooth.powerOnBoot = true;
+  services.blueman.enable = true;
+
   # Enable experimental features for flakes
   nix.settings = {
     substituters = [

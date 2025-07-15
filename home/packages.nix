@@ -16,13 +16,11 @@
     loupe
     celluloid
     ffmpeg
-    prismlauncher
 
     # System utilities
     imagemagick
     pavucontrol
     seahorse
-    nekoray
     file-roller
 
     # Programming

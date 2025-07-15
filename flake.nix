@@ -31,6 +31,7 @@
         ./modules/system.nix
         ./modules/greetd.nix
         ./modules/persist.nix
+        ./modules/proxy.nix
         ./modules/snapper.nix
         ./modules/nvidia.nix
 

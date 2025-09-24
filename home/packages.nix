@@ -18,6 +18,7 @@
     ffmpeg
 
     # System utilities
+    nautilus
     imagemagick
     pavucontrol
     seahorse
@@ -26,13 +27,5 @@
     # Programming
     nixd
     scc
-
-    # File management
-    (xfce.thunar.override {
-      thunarPlugins = [
-        xfce.thunar-volman
-        xfce.thunar-archive-plugin
-      ];
-    })
   ];
 }

@@ -1,4 +1,4 @@
-{ lib, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   # Wallpaper
@@ -7,20 +7,24 @@
     settings.any.path = ../../assets/wallpaper.webp;
   };
 
-  # X Wayland Satellite
+  # Polkit Agent
   systemd.user.services = {
-    xwayland-satellite = {
+    polkit-gnome-agent = {
       Unit = {
-        PartOf = [ "niri.service" ];
-        After = [ "niri.service" ];
+        description = "PolicyKit Authentication Agent";
+        Wants = [ "graphical-session.target" ];
+        After = [ "graphical-session.target" ];
       };
-
+      Install = {
+        WantedBy = [ "graphical-session.target" ];
+      };
       Service = {
-        ExecStart = lib.getExe pkgs.xwayland-satellite;
+        Type = "simple";
+        ExecStart = "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";
         Restart = "on-failure";
+        RestartSec = 1;
+        TimeoutStopSec = 10;
       };
-
-      Install.WantedBy = ["niri.service"];
     };
   };
 }

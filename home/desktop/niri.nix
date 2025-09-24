@@ -17,7 +17,7 @@ let
   appBinds = {
     "Mod+Return".action.spawn = "fuzzel";
     "Mod+BackSlash".action.spawn = "gnome-terminal";
-    "Mod+BackSpace".action.spawn = "thunar";
+    "Mod+BackSpace".action.spawn = "nautilus";
   };
 
   windowBinds = {
@@ -132,7 +132,7 @@ in
       prefer-no-csd = true;
       hotkey-overlay.skip-at-startup = true;
       clipboard.disable-primary = true;
-      environment.DISPLAY = ":0";
+      environment."NIXOS_OZONE_WL" = "1";
       screenshot-path = "~/Pictures/Screenshots/Screenshot_%Y%m%d_%H%M%S.jpg";
     };
   };

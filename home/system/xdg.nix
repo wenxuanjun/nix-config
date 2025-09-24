@@ -6,7 +6,7 @@
     mimeApps = {
       enable = true;
       defaultApplications = {
-        "inode/directory" = "thunar.desktop";
+        "inode/directory" = "nautilus.desktop";
       };
     };
     configFile = {

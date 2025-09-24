@@ -6,6 +6,9 @@
   home.homeDirectory = "/home/wendster";
   home.language.base = "zh_CN.UTF-8";
 
+  # Session variables
+  home.sessionVariables.NIXOS_OZONE_WL = "1";
+
   # Import all modules
   imports = [
     # Core

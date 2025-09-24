@@ -116,6 +116,7 @@ in
           scroll-factor = 0.25;
         };
         mouse = {
+          accel-speed = -0.75;
           scroll-method = "on-button-down";
         };
         power-key-handling = {

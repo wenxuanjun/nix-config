@@ -23,7 +23,6 @@
           provider = "zed.dev";
           model = "claude-sonnet-4-thinking-latest";
         };
-        version = "2";
         default_profile = "write";
         always_allow_tool_actions = true;
         stream_edits = true;

@@ -26,4 +26,12 @@
     mouse = true;
     disableConfirmationPrompt = true;
   };
+
+  programs.starship = {
+    enable = true;
+    settings = {
+      package.disabled = true;
+      directory.truncate_to_repo = false;
+    };
+  };
 }

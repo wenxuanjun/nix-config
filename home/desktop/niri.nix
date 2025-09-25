@@ -17,7 +17,7 @@ let
   appBinds = {
     "Mod+Return".action.spawn = "fuzzel";
     "Mod+BackSlash".action.spawn = "gnome-terminal";
-    "Mod+BackSpace".action.spawn = "nautilus";
+    "Mod+BackSpace".action.spawn = "nemo";
   };
 
   windowBinds = {

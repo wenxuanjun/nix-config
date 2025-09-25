@@ -18,8 +18,7 @@
     ffmpeg
 
     # System utilities
-    nautilus
-    imagemagick
+    nemo
     pavucontrol
     seahorse
     file-roller
@@ -27,5 +26,9 @@
     # Programming
     nixd
     scc
+
+    # Thumbnailer
+    gdk-pixbuf
+    ffmpegthumbnailer
   ];
 }

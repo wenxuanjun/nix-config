@@ -46,6 +46,7 @@
 
       # Miscellaneous
       ".bash_history"
+      ".gtk-bookmarks"
       ".wakatime.cfg"
     ];
   };

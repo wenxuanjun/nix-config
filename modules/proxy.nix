@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 {
-  programs.nekoray = {
+  programs.throne = {
     enable = true;
     tunMode.enable = true;
   };

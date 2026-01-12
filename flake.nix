@@ -16,7 +16,7 @@
     niri.url = "github:sodiboo/niri-flake";
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
-    impermanence.url = "github:nix-community/impermanence/home-manager-v2";
+    impermanence.url = "github:nix-community/impermanence";
   };
 
   outputs = inputs@{ nixpkgs, home-manager, niri, impermanence, ... }: {

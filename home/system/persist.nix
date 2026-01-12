@@ -1,10 +1,6 @@
-{ inputs, ... }:
+{ ... }:
 
 {
-  imports = [
-    inputs.impermanence.homeManagerModules.impermanence
-  ];
-
   home.persistence."/persist" = {
     hideMounts = true;
 

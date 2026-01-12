@@ -2,7 +2,6 @@
 
 {
   programs = {
-    fzf.enable = true;
     lsd.enable = true;
     bat.enable = true;
     htop.enable = true;
@@ -18,7 +17,7 @@
 
   programs.mcfly = {
     enable = true;
-    fzf.enable = true;
+    fuzzySearchFactor = 2;
   };
 
   programs.tmux = {
@@ -30,6 +29,8 @@
   programs.starship = {
     enable = true;
     settings = {
+      add_newline = false;
+      line_break.disabled = true;
       package.disabled = true;
       directory.truncate_to_repo = false;
     };

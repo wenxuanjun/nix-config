@@ -27,6 +27,9 @@
   hardware.bluetooth.powerOnBoot = true;
   services.blueman.enable = true;
 
+  # Enable upower service for power management
+  services.upower.enable = true;
+
   # Enable experimental features for flakes
   nix.settings = {
     substituters = [

@@ -14,6 +14,7 @@
         modules-left = [
           "custom/appmenu"
           "clock"
+          "backlight"
         ];
         modules-center = [
           "niri/workspaces"
@@ -60,11 +61,26 @@
 
         battery = {
           states = {
-            warning = 30;
             critical = 15;
+            warning = 30;
+            mid = 50;
+            high = 80;
+            full = 100;
           };
           format = "{capacity}% {icon}";
-          format-icons = [" " " " " " " " " "];
+          format-charging-critical = "{capacity}% 󰢜 ";
+          format-charging-warning = "{capacity}% 󰂇 ";
+          format-charging-mid = "{capacity}% 󰢝 ";
+          format-charging-high = "{capacity}% 󰂊 ";
+          format-charging-full = "{capacity}% 󰂅 ";
+          format-full = "{capacity}% <span color='#388e3c'>󰂄</span>";
+          format-icons = ["󰂎" "󰁺" "󰁻" "󰁼" "󰁽" "󰁾" "󰁿" "󰂀" "󰂁" "󰂂" "󰁹"];
+        };
+
+        backlight = {
+          device = "intel_backlight";
+          format = "{percent}% {icon}";
+          format-icons = [" " " " " " " " " " " " " "];
         };
 
         pulseaudio = {
@@ -85,14 +101,14 @@
           tooltip = false;
           format = "{icon}";
           "format-icons" = {
-            notification = "<span foreground='red'><sup></sup></span>";
-            none = "";
-            "dnd-notification" = "<span foreground='red'><sup></sup></span>";
-            "dnd-none" = "";
-            "inhibited-notification" = "<span foreground='red'><sup></sup></span>";
-            "inhibited-none" = "";
-            "dnd-inhibited-notification" = "<span foreground='red'><sup></sup></span>";
-            "dnd-inhibited-none" = "";
+            notification = " <span foreground='red'><sup></sup></span>";
+            none = " ";
+            "dnd-notification" = " <span foreground='red'><sup></sup></span>";
+            "dnd-none" = " ";
+            "inhibited-notification" = " <span foreground='red'><sup></sup></span>";
+            "inhibited-none" = " ";
+            "dnd-inhibited-notification" = " <span foreground='red'><sup></sup></span>";
+            "dnd-inhibited-none" = " ";
           };
           "return-type" = "json";
           "exec-if" = "which swaync-client";
@@ -217,6 +233,7 @@
 
       #pulseaudio,
       #battery,
+      #backlight,
       #custom-notification,
       #custom-appmenu,
       #clock {
@@ -286,6 +303,18 @@
       #pulseaudio.muted {
           background-color: @background;
           color: @textcolor1;
+      }
+
+      /* -----------------------------------------------------
+       * Backlight
+       * ----------------------------------------------------- */
+
+      #backlight {
+          background-color: @background;
+          font-size: 14px;
+          color: @textcolor1;
+          border-radius: 15px;
+          margin: 10px 10px 10px 0px;
       }
 
       /* -----------------------------------------------------

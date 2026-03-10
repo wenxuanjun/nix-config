@@ -18,15 +18,6 @@
       };
       terminal = { dock = "right"; };
       icon_theme = "Bearded Icon Theme";
-      agent = {
-        default_model = {
-          provider = "zed.dev";
-          model = "claude-sonnet-4-thinking-latest";
-        };
-        default_profile = "write";
-        always_allow_tool_actions = true;
-        stream_edits = true;
-      };
       telemetry = {
         metrics = false;
         diagnostics = false;

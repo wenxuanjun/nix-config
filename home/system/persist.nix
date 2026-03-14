@@ -20,9 +20,11 @@
       }
 
       # Application data
-      ".mozilla"
+      ".xwechat"
       ".config/QQ"
       ".config/Throne"
+      ".config/chromium"
+      ".config/libreoffice"
       ".config/obs-studio"
 
       # Cache directories

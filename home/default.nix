@@ -28,7 +28,7 @@
     ./desktop/fuzzel.nix
 
     # Applications
-    ./apps/firefox.nix
+    ./apps/chromium.nix
     ./apps/gnome-terminal.nix
     ./apps/zed-editor.nix
   ];

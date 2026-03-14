@@ -7,6 +7,12 @@
     settings.any.path = ../../assets/wallpaper.webp;
   };
 
+  # Applets services
+  services = {
+    blueman-applet.enable = true;
+    network-manager-applet.enable = true;
+  };
+
   # Polkit Agent
   systemd.user.services = {
     polkit-gnome-agent = {

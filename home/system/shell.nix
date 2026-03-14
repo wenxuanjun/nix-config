@@ -4,7 +4,7 @@
   programs = {
     lsd.enable = true;
     bat.enable = true;
-    htop.enable = true;
+    btop.enable = true;
     fastfetch.enable = true;
   };
 

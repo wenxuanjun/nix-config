@@ -12,10 +12,12 @@
 
     # Multimedia
     qq
+    wechat
     obs-studio
     loupe
     celluloid
     ffmpeg
+    libreoffice-fresh
 
     # System utilities
     nemo

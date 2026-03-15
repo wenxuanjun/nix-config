@@ -33,7 +33,6 @@
         ./modules/persist.nix
         ./modules/proxy.nix
         ./modules/snapper.nix
-        ./modules/nvidia.nix
 
         # External modules
         niri.nixosModules.niri

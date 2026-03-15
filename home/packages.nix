@@ -32,5 +32,8 @@
     # Thumbnailer
     gdk-pixbuf
     ffmpegthumbnailer
+
+    # Games
+    osu-lazer-bin
   ];
 }

@@ -34,6 +34,7 @@
       ".local/share/keyrings"
       ".local/share/mcfly"
       ".local/share/nix"
+      ".local/share/osu"
       ".local/share/zed"
       ".local/state/wireplumber"
     ];

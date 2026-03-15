@@ -69,6 +69,11 @@ in
         workspaceBinds
       ];
 
+      environment = {
+        NIXOS_OZONE_WL = "1";
+        SDL_VIDEODRIVER = "wayland";
+      };
+
       outputs = {
         "STD Computer Inc iPlaoe 123456789000" = {
           mode = {
@@ -132,7 +137,6 @@ in
       prefer-no-csd = true;
       hotkey-overlay.skip-at-startup = true;
       clipboard.disable-primary = true;
-      environment."NIXOS_OZONE_WL" = "1";
       screenshot-path = "~/Pictures/Screenshots/Screenshot_%Y%m%d_%H%M%S.jpg";
     };
   };
